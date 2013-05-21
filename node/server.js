@@ -10,7 +10,7 @@ http.createServer(function (request, response) {
       break;
     case 'GET':
       if(path === '/'){
-        response.writeHead(200,{'Content-Type':'text/html'});
+        /* Note: provide a proper status code (200) and content type ('text/html') in the HTTP response  */
         response.end(fs.readFileSync(__dirname+'/index.html'));
       }
       break;
