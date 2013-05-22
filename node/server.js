@@ -1,12 +1,16 @@
-var ??? = /* Missing require statment */,
-    ??? = /* Missing require statment */,
-    ??? = /* Missing require statment */;
+var http = require('http'),
+    url = require('url'),
+    fs = require('fs');
 
 http.createServer(function (request, response) {
   var path = url.parse(request.url, true).pathname;
   switch(request.method) {
     case 'POST':
-      /*========YOUR CODE HERE=========*/
+      if (path === '/hifive'){
+        response.end(fs.readFileSync(__dirname + '/assets/hifive.jpg'))
+      } else if (path === '/lowfive'){
+        response.end(fs.readFileSync(__dirname + '/assets/lowfive.jpg'))
+      }
       break;
     case 'GET':
       if(path === '/'){

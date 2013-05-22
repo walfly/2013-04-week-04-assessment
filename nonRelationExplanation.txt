@@ -1,1 +1,3 @@
 List the main differences you can think of between relational databases and non-relational ones.
+
+Relational databases involve relations that join your data together.  This affords additional flexibility and speed in queries, but makes it very difficult to augment the structure once implemented.  Non-relational databases can evolve over there time as adding to the data structure doesn't involve rewriting everything. However, they don't afford constant time look ups.  
